@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contact Informartion</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main class="main-content">
+        <form id="contact-form">
+            <!-- full name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="fullname" placeholder="Enter your full name" required>
+            </div>
+            <!-- phone number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <div class="form-group__adress">
+                    <div class="form-group__adress__wrapper">
+                        <select class="address-select" required>
+                            <option value="         "> Enter your address</option>
+                            <option value="Gedimino prospektas">Gedimino prospektas</option>
+                            <option value="vilnius g. 33">vilnius g. 33</option>
+                            <option value="Kaunas g. 12">Kaunas g. 12</option>
+                            <option value="Konstitucijos pr. 12">Konstitucijos pr. 12</option>
+                            <option value="Pilies g. 16, Vilnius">Pilies g. 16, Vilnius</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Lithuanian personal code with regex -- 11 digits -->
+            <div claudass="form-group">
+                <label for="personal-code"> Personal Code:</label>
+                <input type="text" id="personal-code" name="personal-code" placeholder="Enter your personal code"
+                    pattern="[1-6][0-9]{10}" title="11 digits, starting with 1-6" required>
+                <span class="hint">format: 11 digits starting with 1-6</span>
+            </div>
+            <!-- message -->
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+            </div>
+            <!-- submit button -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Details</button>
+                <header>
+                   <h2><small>YOUR FEED BACK IS IMPORTANT TO US</small></h2>
+                </header>
+            
+                <section class="contact">
+                    <div class="container">
+                        <h2>contact us</h2>
+                        <div class="contact-wrapper">
+                            <div class="contact-form">
+                                <h3>send as message</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Your Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Your Message"></textarea>
+                                    </div>
+                                    <button type="submit">Send Message</button>
+                                </form>
+                            </div>
+                            <div class="contact-info">
+                                <h3>contact informartion</h3>
+                                <p><i class="fas fa-phone"></i> +37064280183</p>
+                                <p><i class="fa-solid fa-envelope"></i>abdullmalikjumarashid@gmail.com</p>
+                                <p><i class="bi bi-geo-alt"></i>Vilnius, Lithuania</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Contact Page</p>
+    </footer>
+</body>
+
+</html>
